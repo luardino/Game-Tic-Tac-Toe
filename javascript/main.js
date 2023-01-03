@@ -8,4 +8,9 @@ window.onload = ()=>{
         selectBox.classList.add('hide')
         playBoard.classList.add('show')
     }
+
+    selectOBtn.onclick = ()=>{
+        selectBox.classList.add('hide')
+        playBoard.classList.add('show')
+    }
 }
