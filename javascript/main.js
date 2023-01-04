@@ -19,13 +19,17 @@ window.onload = ()=>{
     selectOBtn.onclick = ()=>{
         selectBox.classList.add('hide')
         playBoard.classList.add('show')
-        players.setAttribute('class', 'players active')
+        players.setAttribute('class', 'players active player')
     }
 }
 
-let playerXicon = 'fas fa-times'
-let playerOicon = 'fas fa-circle'
+let playerXIcon = 'fas fa-times'
+let playerOIcon = 'far fa-circle'
 
 function clickedBox(element){
-    
+    if(players.classList.contains('player')){
+        element.innertHTML = `<i class = '${playerOIcon}'></i>`
+    }else{
+        element.innertHTML = `<i class = '${playerXIcon}'</i>`
+    }
 }
